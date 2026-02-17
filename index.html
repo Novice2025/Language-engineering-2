@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Native Shift Method™ Dashboard</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <aside class="sidebar">
+    <div class="brand">Native Shift™</div>
+    <div class="profile-card">
+      <div class="user-rank" id="userRank">Tourist</div>
+      <div class="user-level" id="userLevel">1</div>
+      <div class="level-label">Level</div>
+      <div class="xp-bar-container"><div class="xp-bar-fill" id="xpFill"></div></div>
+      <div class="xp-text"><span id="currentXP">0 XP</span><span id="nextLevelXP">100 XP</span></div>
+      <div class="badges-container" id="badgesContainer"></div>
+    </div>
+    <div class="nav-label">Introduction</div>
+    <div id="sidebar-intro"></div>
+    <div class="nav-label">Modules</div>
+    <div id="sidebar-modules"></div>
+    <div class="lang-controls">
+      <button id="unlockBtn" onclick="openFrenchModal()" class="french-unlock-btn"><span>🔒 Unlock French Mode</span></button>
+      <button id="toggleBtn" onclick="toggleLanguage()" class="lang-toggle-btn"><span>🇺🇸 Switch to English</span></button>
+    </div>
+  </aside>
+
+  <main class="main">
+    <header class="top-header">
+      <h1 class="main-title">Native Shift Method™ <span class="author-tag">by Daby</span></h1>
+      <div class="subtitle-bridge" id="subtitle">🇧🇷 Brazilian cognitive bridge to native English 🌎</div>
+      <div class="selling-points">
+        <span class="sp-item sp-1">👉 Melhor que 90% dos cursos de inglês brasileiros</span>
+        <span class="sp-item sp-2">👉 Mais moderno que livros didáticos tradicionais</span>
+        <span class="sp-item sp-3">👉 Potencialmente vendável globalmente</span>
+      </div>
+      <div class="neon-signature">Daby Disruptive Block Chain Lego Method</div>
+    </header>
+    <div class="content-scroll" id="dynamic-content"></div>
+  </main>
+
+  <div class="modal-overlay" id="frenchModal">
+    <div class="modal-box">
+      <h2 style="margin-bottom: 15px;">🇫🇷 Unlock French System</h2>
+      <p style="margin-bottom: 15px; color: #94a3b8;">Enter your access code.</p>
+      <input type="password" id="passcode" placeholder="Code" style="padding: 10px; border-radius: 4px; border: none; text-align: center;">
+      <br><br>
+      <button onclick="checkPasscode()" class="check-btn">Unlock</button>
+      <button onclick="closeFrenchModal()" style="background: transparent; border: none; color: #94a3b8; margin-left: 10px; cursor: pointer;">Cancel</button>
+    </div>
+  </div>
+
+  <div id="pacman-overlay" class="pacman-overlay">
+    <div class="you-rock">YOU ROCK! 🎸</div>
+    <div class="pacman"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+  </div>
+
+  <!-- SCRIPTS -->
+  <script src="js/state.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/gamification.js"></script>
+  <script src="js/main.js"></script>
+
+</body>
+</html>
